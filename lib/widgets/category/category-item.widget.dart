@@ -10,9 +10,9 @@ class CategoryItem extends StatelessWidget {
       height: 70,
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.all(10),
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        boxShadow: [
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.onSecondary,
+        boxShadow: const [
           BoxShadow(
             color: Colors.black12,
             offset: Offset(1, 1),
@@ -20,7 +20,7 @@ class CategoryItem extends StatelessWidget {
             spreadRadius: 2,
           ),
         ],
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(64),
         ),
       ),

@@ -74,14 +74,6 @@ Widget productList(BuildContext context) {
       productItem(context),
       productItem(context),
       productItem(context),
-      // productItem(context, "BeoPlay Speaker", "755", "assets/product-1.png"),
-      // productItem(context, "Leather Wristwach", "450", "assets/product-2.png"),
-      // productItem(
-      //     context, "Smart Bluetooth Speaker", "900", "assets/product-3.png"),
-      // productItem(context, "Smart luggage", "100", "assets/product-4.png"),
-      // productItem(context, "Smartphone Case", "99", "assets/product-5.png"),
-      // productItem(context, "Speakers Stand", "49", "assets/product-6.png"),
-      // productItem(context, "Airpods", "199", "assets/product-7.png"),
     ],
   );
 }

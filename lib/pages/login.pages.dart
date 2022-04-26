@@ -9,7 +9,6 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: const Color(0xFFF5F5F5),
           padding: const EdgeInsets.only(
             top: 80,
             left: 20,
@@ -20,9 +19,9 @@ class LoginPage extends StatelessWidget {
             children: [
               Container(
                 height: 450,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  boxShadow: [
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondary,
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black12,
                       offset: Offset(1, 2.0),
@@ -43,19 +42,24 @@ class LoginPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
-                            children: const [
+                            children: [
                               Text(
                                 "Welcome",
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                                style: Theme.of(context).textTheme.displaySmall,
                               ),
-                              Text("Sign in to continue"),
+                              Text(
+                                "Sign in to continue",
+                                style: Theme.of(context).textTheme.subtitle1,
+                              ),
                             ],
                           ),
                           TextButton(
-                            child: const Text("Sign Up"),
+                            child: Text(
+                              "Sign Up",
+                              style: TextStyle(
+                                color: Theme.of(context).primaryColor,
+                              ),
+                            ),
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -70,10 +74,10 @@ class LoginPage extends StatelessWidget {
                       TextFormField(
                         // autofocus: true,
                         keyboardType: TextInputType.emailAddress,
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: "Email",
                           labelStyle: TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
@@ -87,10 +91,10 @@ class LoginPage extends StatelessWidget {
                         // autofocus: true,
                         keyboardType: TextInputType.text,
                         obscureText: true,
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: "Password",
                           labelStyle: TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
@@ -103,7 +107,12 @@ class LoginPage extends StatelessWidget {
                         height: 40,
                         alignment: Alignment.centerRight,
                         child: TextButton(
-                          child: const Text("Forgot your password?"),
+                          child: Text(
+                            "Forgot your password?",
+                            style: TextStyle(
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
                           onPressed: () {},
                         ),
                       ),
@@ -112,18 +121,19 @@ class LoginPage extends StatelessWidget {
                       ),
                       Container(
                         width: double.infinity,
-                        decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.all(
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                          borderRadius: const BorderRadius.all(
                             Radius.circular(5),
                           ),
                         ),
                         child: TextButton(
-                          onPressed: () { },
+                          onPressed: () {},
                           child: const Text(
                             "Sign In",
                             style: TextStyle(
                               color: Colors.white,
+                              
                             ),
                           ),
                         ),
@@ -148,7 +158,7 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 2.0,
-                    color: Colors.blue,
+                    color: Theme.of(context).primaryColor,
                   ),
                   borderRadius: const BorderRadius.all(
                     Radius.circular(
@@ -182,7 +192,7 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 2.0,
-                    color: Colors.blue,
+                    color: Theme.of(context).primaryColor,
                   ),
                   borderRadius: const BorderRadius.all(
                     Radius.circular(

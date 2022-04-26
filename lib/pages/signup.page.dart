@@ -12,7 +12,6 @@ class SignupPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: const Color(0xFFF5F5F5),
           padding: const EdgeInsets.only(
             top: 80,
             left: 20,
@@ -42,22 +41,19 @@ class SignupPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      const Text(
+                      Text(
                         "Signup",
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
-                        ),
+                        style: Theme.of(context).textTheme.displaySmall,
                       ),
                       const SizedBox(
                         height: 60,
                       ),
                       TextFormField(
                         keyboardType: TextInputType.text,
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: "Name",
                           labelStyle: TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
@@ -69,10 +65,10 @@ class SignupPage extends StatelessWidget {
                       const SizedBox(height: 10),
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
-                        decoration: const InputDecoration(
+                        decoration:  InputDecoration(
                           labelText: "Email",
                           labelStyle: TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
@@ -85,10 +81,10 @@ class SignupPage extends StatelessWidget {
                       TextFormField(
                         keyboardType: TextInputType.text,
                         obscureText: true,
-                        decoration: const InputDecoration(
+                        decoration:  InputDecoration(
                           labelText: "Password",
                           labelStyle: TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
@@ -100,9 +96,9 @@ class SignupPage extends StatelessWidget {
                       const SizedBox(height: 40),
                       Container(
                         width: double.infinity,
-                        decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.all(
+                        decoration:  BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                          borderRadius: const BorderRadius.all(
                             Radius.circular(5),
                           ),
                         ),

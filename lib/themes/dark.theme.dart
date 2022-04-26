@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-const brightness = Brightness.light;
+const brightness = Brightness.dark;
 const primaryColor = Color(0xFF00C569);
 const lightColor = Color(0xFFFFFFFF);
 const backgroundColor = Color(0xFFF5F5F5);
 
-ThemeData lightTheme() {
+ThemeData darkTheme() {
   return ThemeData(
+    primaryColor: primaryColor,
     // primarySwatch: primaryColor,
     brightness: brightness,
     // textTheme: new TextTheme(
@@ -37,14 +38,17 @@ ThemeData lightTheme() {
     // primaryIconTheme:
     // primaryTextTheme:
     // sliderTheme:
-    primaryColor: primaryColor,
+    // accentColorBrightness: Colors.black26,
+    // cardColor: Colors.black26,
     colorScheme: ColorScheme?.fromSwatch().copyWith(
-      brightness: Brightness.light,
-      secondary: Colors.white,
+      brightness: Brightness.dark,
+      secondary: Colors.black26,
+      onSecondary: Colors.white,
     ),
+    // colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.black26),
     // fontFamily: 'Montserrat',
-    // accentColor: Colors.white,
     // buttonColor: Color(0xFF00C569),
     // // scaffoldBackgroundColor: backgroundColor,
+    // cardColor: Colors.white,
   );
 }
