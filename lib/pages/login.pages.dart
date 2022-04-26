@@ -122,13 +122,7 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                         child: TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const HomePage(),
-                                ));
-                          },
+                          onPressed: () {},
                           child: const Text(
                             "Sign In",
                             style: TextStyle(
