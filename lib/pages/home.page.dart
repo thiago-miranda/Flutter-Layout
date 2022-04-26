@@ -19,9 +19,9 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: 60),
               const SearchBox(),
               const SizedBox(height: 30),
-              const Text(
+              Text(
                 "Categories",
-                style: TextStyle(fontSize: 30),
+                style: Theme.of(context).textTheme.headline5,
               ),
               const SizedBox(height: 10),
               const SizedBox(
@@ -32,9 +32,9 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                   Text(
                     "Best Selling",
-                    style: TextStyle(fontSize: 30),
+                    style: Theme.of(context).textTheme.headline5,
                   ),
                   TextButton(
                     onPressed: () {},

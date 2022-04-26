@@ -11,7 +11,7 @@ class CartPage extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              child: productList(),
+              child: productList(context),
             ),
           ),
           Container(
@@ -24,13 +24,13 @@ class CartPage extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, top: 20),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      Text("TOTAL"),
-                      SizedBox(height: 5),
+                    children: [
+                      const Text("TOTAL"),
+                      const SizedBox(height: 5),
                       Text(
                         "\$4250",
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Theme.of(context).primaryColor,
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
@@ -41,21 +41,21 @@ class CartPage extends StatelessWidget {
                 Container(
                   height: 50,
                   width: 150,
-                  decoration: const BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.all(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(5),
                     ),
                   ),
                   margin: const EdgeInsets.only(right: 20.0),
                   child: TextButton(
-                    onPressed: () => {},
-                      child: const Text(
-                    "Checkout",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  )),
+                      onPressed: () => {},
+                      child: Text(
+                        "Checkout",
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.secondary,
+                        ),
+                      )),
                 ),
               ],
             ),
@@ -66,14 +66,14 @@ class CartPage extends StatelessWidget {
   }
 }
 
-Widget productList() {
+Widget productList(BuildContext context) {
   return ListView(
     children: [
-      productItem(),
-      productItem(),
-      productItem(),
-      productItem(),
-      productItem(),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
       // productItem(context, "BeoPlay Speaker", "755", "assets/product-1.png"),
       // productItem(context, "Leather Wristwach", "450", "assets/product-2.png"),
       // productItem(
@@ -86,7 +86,7 @@ Widget productList() {
   );
 }
 
-Widget productItem() {
+Widget productItem(context) {
   return Container(
     margin: const EdgeInsets.all(5),
     child: Row(
@@ -110,9 +110,11 @@ Widget productItem() {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text("Titulo do produto"),
-                  const Text(
+                  Text(
                     "\$ 200",
-                    style: TextStyle(color: Colors.blue),
+                    style: TextStyle(
+                      color: Theme.of(context).primaryColor,
+                    ),
                   ),
                   const SizedBox(height: 10),
                   Container(
