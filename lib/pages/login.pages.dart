@@ -122,7 +122,7 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () { },
                           child: const Text(
                             "Sign In",
                             style: TextStyle(

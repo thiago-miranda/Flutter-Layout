@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout/pages/product.page.dart';
+import 'package:flutter_layout/widgets/category/category-item.widget.dart';
+import 'package:flutter_layout/widgets/search-box.widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const SizedBox(height: 60),
-              search(),
+              const SearchBox(),
               const SizedBox(height: 30),
               const Text(
                 "Categories",
@@ -55,81 +57,18 @@ class HomePage extends StatelessWidget {
   }
 }
 
-Widget search() {
-  return Container(
-    height: 60,
-    padding: const EdgeInsets.only(left: 20),
-    decoration: const BoxDecoration(
-      color: Color.fromRGBO(0, 0, 0, 0.1),
-      borderRadius: BorderRadius.all(
-        Radius.circular(
-          128,
-        ),
-      ),
-    ),
-    child: Row(
-      children: [
-        const Icon(Icons.search),
-        Container(
-          width: 300,
-          padding: const EdgeInsets.only(left: 10),
-          child: TextFormField(
-            keyboardType: TextInputType.text,
-            decoration: const InputDecoration(
-              border: InputBorder.none,
-              labelText: "Search...",
-              labelStyle: TextStyle(
-                color: Colors.blue,
-                fontWeight: FontWeight.w300,
-                fontSize: 16,
-              ),
-            ),
-            style: const TextStyle(
-              fontSize: 20,
-              color: Colors.blue,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
-}
-
 Widget categoryList() {
   return Container(
     child: ListView(
       scrollDirection: Axis.horizontal,
-      children: [
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
+      children: const [
+        CategoryItem(image: 'assets/Icon_Devices.png'),
+        CategoryItem(image: "assets/Icon_Gadgets.png"),
+        CategoryItem(image: "assets/Icon_Gaming.png"),
+        CategoryItem(image: "assets/Icon_Mens_Shoe.png"),
+        CategoryItem(image: "assets/Icon_Womens_Shoe.png"),
       ],
     ),
-  );
-}
-
-Widget categoryItem() {
-  return Container(
-    width: 70,
-    height: 70,
-    margin: const EdgeInsets.all(10),
-    padding: const EdgeInsets.all(10),
-    decoration: const BoxDecoration(
-      color: Colors.white,
-      boxShadow: [
-        BoxShadow(
-          color: Colors.black12,
-          offset: Offset(1, 1),
-          blurRadius: 5,
-          spreadRadius: 2,
-        ),
-      ],
-      borderRadius: BorderRadius.all(
-        Radius.circular(64),
-      ),
-    ),
-    child: Image.asset("assets/Icon_Devices.png"),
   );
 }
 
