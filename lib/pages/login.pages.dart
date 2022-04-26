@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_layout/pages/home.page.dart';
 import 'package:flutter_layout/pages/signup.page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -121,7 +122,13 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const HomePage(),
+                                ));
+                          },
                           child: const Text(
                             "Sign In",
                             style: TextStyle(
