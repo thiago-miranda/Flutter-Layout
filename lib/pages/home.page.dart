@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_layout/pages/product.page.dart';
 import 'package:flutter_layout/widgets/category/category-list.dart';
+import 'package:flutter_layout/widgets/product/product-list.widget.dart';
 import 'package:flutter_layout/widgets/search-box.widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -45,9 +45,11 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 350,
-                child: productList(context),
+                child: ProductList(
+                  scrollDirection: Axis.horizontal,
+                ),
               ),
             ],
           ),
@@ -55,76 +57,4 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget productList(BuildContext context) {
-  return Container(
-    child: ListView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        productItem(context),
-        productItem(context),
-        productItem(context),
-        productItem(context),
-      ],
-    ),
-  );
-}
-
-Widget productItem(BuildContext context) {
-  return Container(
-    padding: const EdgeInsets.all(10),
-    margin: const EdgeInsets.all(5),
-    width: 170,
-    color: Colors.black12,
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ProductPage(),
-              ),
-            );
-          },
-          child: Image.asset(
-            "assets/product-1.png",
-            width: 170,
-            height: 170,
-            fit: BoxFit.cover,
-          ),
-        ),
-        const SizedBox(height: 10),
-        const SizedBox(
-          height: 60,
-          child: Text(
-            "Titulo do Produto",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w300,
-            ),
-          ),
-        ),
-        const SizedBox(height: 5),
-        const Text(
-          "Marca",
-          style: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w300,
-          ),
-        ),
-        const SizedBox(height: 5),
-        const Text(
-          "\$ 200",
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF00C569),
-          ),
-        ),
-      ],
-    ),
-  );
 }
