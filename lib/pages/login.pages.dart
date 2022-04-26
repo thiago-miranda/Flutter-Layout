@@ -1,7 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
-import 'package:flutter_layout/pages/home.page.dart';
 import 'package:flutter_layout/pages/signup.page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -46,15 +43,15 @@ class LoginPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
-                            children: [
-                              const Text(
+                            children: const [
+                              Text(
                                 "Welcome",
                                 style: TextStyle(
                                   fontSize: 30,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              const Text("Sign in to continue"),
+                              Text("Sign in to continue"),
                             ],
                           ),
                           TextButton(

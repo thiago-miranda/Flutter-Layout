@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout/pages/product.page.dart';
-import 'package:flutter_layout/widgets/category/category-item.widget.dart';
+import 'package:flutter_layout/widgets/category/category-list.dart';
 import 'package:flutter_layout/widgets/search-box.widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -24,9 +24,9 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 30),
               ),
               const SizedBox(height: 10),
-              SizedBox(
+              const SizedBox(
                 height: 90,
-                child: categoryList(),
+                child: CategoryList(),
               ),
               const SizedBox(height: 30),
               Row(
@@ -55,21 +55,6 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget categoryList() {
-  return Container(
-    child: ListView(
-      scrollDirection: Axis.horizontal,
-      children: const [
-        CategoryItem(image: 'assets/Icon_Devices.png'),
-        CategoryItem(image: "assets/Icon_Gadgets.png"),
-        CategoryItem(image: "assets/Icon_Gaming.png"),
-        CategoryItem(image: "assets/Icon_Mens_Shoe.png"),
-        CategoryItem(image: "assets/Icon_Womens_Shoe.png"),
-      ],
-    ),
-  );
 }
 
 Widget productList(BuildContext context) {
