@@ -21,9 +21,9 @@ class SignupPage extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  boxShadow: [
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondary,
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black12,
                       offset: Offset(1, 2.0),
@@ -65,7 +65,7 @@ class SignupPage extends StatelessWidget {
                       const SizedBox(height: 10),
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
-                        decoration:  InputDecoration(
+                        decoration: InputDecoration(
                           labelText: "Email",
                           labelStyle: TextStyle(
                             color: Theme.of(context).primaryColor,
@@ -81,7 +81,7 @@ class SignupPage extends StatelessWidget {
                       TextFormField(
                         keyboardType: TextInputType.text,
                         obscureText: true,
-                        decoration:  InputDecoration(
+                        decoration: InputDecoration(
                           labelText: "Password",
                           labelStyle: TextStyle(
                             color: Theme.of(context).primaryColor,
@@ -96,7 +96,7 @@ class SignupPage extends StatelessWidget {
                       const SizedBox(height: 40),
                       Container(
                         width: double.infinity,
-                        decoration:  BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Theme.of(context).primaryColor,
                           borderRadius: const BorderRadius.all(
                             Radius.circular(5),

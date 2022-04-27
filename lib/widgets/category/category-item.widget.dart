@@ -11,7 +11,7 @@ class CategoryItem extends StatelessWidget {
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.onSecondary,
+        color: Theme.of(context).colorScheme.secondary,
         boxShadow: const [
           BoxShadow(
             color: Colors.black12,
