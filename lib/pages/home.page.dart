@@ -41,9 +41,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               const SizedBox(
                 height: 350,
                 child: ProductList(

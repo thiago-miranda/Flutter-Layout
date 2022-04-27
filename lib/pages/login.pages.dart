@@ -6,6 +6,7 @@ class LoginPage extends StatelessWidget {
 
   final _formKey = GlobalKey<FormState>();
   String? _email;
+  // ignore: unused_field
   String? _password;
 
   @override
