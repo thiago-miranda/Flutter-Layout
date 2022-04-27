@@ -146,8 +146,8 @@ class LoginPage extends StatelessWidget {
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
                                 _formKey.currentState!.save();
-                                print(_email);
-                                print(_password);
+                                // print(_email);
+                                // print(_password);
 
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
