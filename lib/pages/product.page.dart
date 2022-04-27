@@ -28,17 +28,20 @@ class ProductPage extends StatelessWidget {
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
-                background: Image.asset(
-                  "$image",
-                  width: double.infinity,
-                  fit: BoxFit.fitWidth,
+                background: Hero(
+                  tag: "$image",
+                  child: Image.asset(
+                    "$image",
+                    width: double.infinity,
+                    fit: BoxFit.fitWidth,
+                  ),
                 ),
               ),
             ),
           ];
         },
         body: ListView(
-          children:  [
+          children: [
             Padding(
               padding: const EdgeInsets.only(
                 top: 10,
@@ -53,7 +56,7 @@ class ProductPage extends StatelessWidget {
                 ),
               ),
             ),
-             Padding(
+            Padding(
               padding: const EdgeInsets.all(10),
               child: Text("$description"),
             ),
