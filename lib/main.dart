@@ -19,6 +19,6 @@ class MyApp extends StatelessWidget {
         length: 3,
         child: TabsPage(),
       ),
-    );
+    ); 
   }
 }
